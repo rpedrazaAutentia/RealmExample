@@ -19,45 +19,25 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-        //Instanciamos nuestro modelo
-        ARPersonModel *person = [[ARPersonModel alloc]init];
-    
-        //Asignamos valores a sus propiedades.
-        person.name = @"Raúl";
-        person.lastName = @"Pedraza";
-    
-        //Creamos nuestro "Reino" indicando que nos creara en la ruta por defecto asignada una BBDD con nombre default.
-        RLMRealm *realm       = [RLMRealm defaultRealm];
-    
-        //Le decimos a Realm que va a ser temporalmente de escritura, ya que por defecto es solo lectura.
-        [realm beginWriteTransaction];
-    
-        //Persistimos el modelo en la BBDD.
-        [realm addObject:person];
-    
-        //Completamos proceso y liberamos y le decimos a Realm que ahora veulve a ser solo de lectura.
-        [realm commitWriteTransaction];
-    
-    
-    
-    
-    
 //    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+//        //Instanciamos nuestro modelo
+//        ARPersonModel *person = [[ARPersonModel alloc]init];
+//    
+//        //Asignamos valores a sus propiedades.
+//        person.name = @"Raúl";
+//        person.lastName = @"Pedraza";
+//    
+//        //Creamos nuestro "Reino" indicando que nos creara en la ruta por defecto asignada una BBDD con nombre default.
+//        RLMRealm *realm       = [RLMRealm defaultRealm];
+//    
+//        //Le decimos a Realm que va a ser temporalmente de escritura, ya que por defecto es solo lectura.
+//        [realm beginWriteTransaction];
+//    
+//        //Persistimos el modelo en la BBDD.
+//        [realm addObject:person];
+//    
+//        //Completamos proceso y liberamos y le decimos a Realm que ahora veulve a ser solo de lectura.
+//        [realm commitWriteTransaction];
     
     self.persons = [ARPersonModel allObjects];
     [self configButtons];
